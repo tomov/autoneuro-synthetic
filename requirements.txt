@@ -1,0 +1,7 @@
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_fdy66ybhuv/croot/certifi_1669749572520/work/certifi
+cloudpickle==2.2.1
+gymnasium==0.27.1
+gymnasium-notices==0.0.1
+jax-jumpy==0.2.0
+numpy==1.24.2
+typing_extensions==4.5.0
