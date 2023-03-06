@@ -23,7 +23,7 @@ def save_outputs(output_dir: os.path, agent_infos: List[Dict[str, np.array]]) ->
     output_names = agent_infos[0].keys()
     for output_name in output_names:
         output = np.vstack([agent_info[output_name] for agent_info in agent_infos])
-        np.savetxt(os.path.join(output_dir, f'{output_name}.csv'), output, delimiter=',')
+        np.savetxt(os.path.join(output_dir, f'{output_name}s.csv'), output, delimiter=',')
 
 
 def sim_agent(env: Classical, agent: Agent) -> List[Dict[str, np.array]]:
