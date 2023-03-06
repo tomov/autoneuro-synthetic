@@ -35,9 +35,9 @@ Each has subdirectories:
 - For input variables: `input/<variable name>.csv`
 - For output variables: `output/<model name>/<variable name>.csv`
 
-Each file corresponds to different variable. Each row corresponds to a (sequential) data point. 
+Each file corresponds to a different variable. Each row corresponds to a (sequential) data point. 
 
-Concatenating all the files (horizontally) for given behavior of phenomenon (e.g., `data/classical/overshadowing/`) produces the dataset.
+Concatenating all the files (horizontally) for a given behavioral phenomenon (e.g., `data/classical/overshadowing/`) produces a dataset for the automated neuroscientist.
 
 Example for Rescorla-Wagner model:
 ```
