@@ -53,7 +53,7 @@ class Q(Agent):
                 observation: Observation,
                 action: Action,
                 reward: Reward,
-                next_observation: Observation) -> Dict[str, Any]:
+                next_observation: Observation) -> Dict[str, np.array]:
         """
         Update state-action weights using Q-learning
         :param observation: previous observation

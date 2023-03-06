@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing import Dict
 
 import gymnasium as gym
 import numpy as np
@@ -37,7 +37,7 @@ class RW(Agent):
                 observation: Observation,
                 action: Action,
                 reward: Reward,
-                next_observation: Observation) -> Dict[str, Any]:
+                next_observation: Observation) -> Dict[str, np.array]:
         """
         Update weights using Rescorla-Wagner rule.
         https://en.wikipedia.org/wiki/Rescorla%E2%80%93Wagner_model

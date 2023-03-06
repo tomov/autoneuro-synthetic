@@ -39,7 +39,7 @@ class TD(Agent):
                 observation: Observation,
                 action: Action,
                 reward: Reward,
-                next_observation: Observation) -> Dict[str, Any]:
+                next_observation: Observation) -> Dict[str, np.array]:
         """
         :param observation: previous observation
         :param action: previous action
@@ -50,5 +50,5 @@ class TD(Agent):
         value = self.weights.dot(observation)
         next_value = self.weights.dot(next_observation)
         rpe = reward + self.discount_rate * next_value - value
-        self.weights[action] += self.learning_rate * rpe * observation
+        self.weights += self.learning_rate * rpe * observation
         return {'value': value, 'next_value': next_value, 'rpe': rpe}

@@ -1,5 +1,7 @@
 import abc
-from typing import Dict, Any
+from typing import Dict
+
+import numpy as np
 
 from common.types import Observation, Action, Reward
 
@@ -27,7 +29,7 @@ class Agent(abc.ABC):
                 observation: Observation,
                 action: Action,
                 reward: Reward,
-                next_observation: Observation) -> Dict[str, Any]:
+                next_observation: Observation) -> Dict[str, np.array]:
         """
         Process events (SARS tuple) from environment.
         :param observation: previous observation
