@@ -28,7 +28,7 @@ class Q(Agent):
 
     def reset(self):
         self.weights = np.zeros((self.num_actions, self.dim))
-        self.weights = np.random.random((self.num_actions, self.dim)) * 0.001
+        #self.weights = np.random.random((self.num_actions, self.dim)) * 0.001
 
     def act(self, observation: Observation) -> Action:
         """
