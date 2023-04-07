@@ -22,6 +22,9 @@ class RW(Agent):
 
         self.reset()
 
+    def __str__(self):
+        return f'RW_alpha={self.learning_rate:.3f}'
+
     def reset(self):
         self.weights = np.zeros((self.dim,))
 

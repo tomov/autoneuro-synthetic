@@ -1,12 +1,11 @@
-import random
-from typing import Dict, Any
+from typing import Dict
 
 import gymnasium as gym
 import numpy as np
 
 from agents.agent import Agent
 from common.types import Observation, Action, Reward
-from utils.spaces_helpers import get_1D_box_observation_space_dim, get_discrete_action_space_n
+from utils.spaces_helpers import get_1D_box_observation_space_dim
 
 
 class TD(Agent):
@@ -14,7 +13,7 @@ class TD(Agent):
     TD-learning agent
     """
 
-    def __init__(self, env: gym.Env, learning_rate: float = 0.1, discount_rate: float = 0.9, eps: float = 0.1):
+    def __init__(self, env: gym.Env, learning_rate: float = 0.1, discount_rate: float = 0.9):
         super(TD, self).__init__()
 
         self.dim = get_1D_box_observation_space_dim(env)
@@ -23,6 +22,9 @@ class TD(Agent):
         self.action_space = env.action_space
 
         self.reset()
+
+    def __str__(self):
+        return f'TD_alpha={self.learning_rate:.3f}_gamma={self.discount_rate:.3f}'
 
     def reset(self):
         self.weights = np.zeros((self.dim,))

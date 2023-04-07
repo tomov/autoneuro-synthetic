@@ -1,5 +1,5 @@
 import random
-from typing import Dict, Any
+from typing import Dict
 
 import gymnasium as gym
 import numpy as np
@@ -26,9 +26,12 @@ class Q(Agent):
 
         self.reset()
 
+    def __str__(self):
+        return f'Q_alpha={self.learning_rate:.3f}_gamma={self.discount_rate:.3f}_eps={self.eps:.3f}'
+
     def reset(self):
         self.weights = np.zeros((self.num_actions, self.dim))
-        #self.weights = np.random.random((self.num_actions, self.dim)) * 0.001
+        # self.weights = np.random.random((self.num_actions, self.dim)) * 0.001
 
     def act(self, observation: Observation) -> Action:
         """
