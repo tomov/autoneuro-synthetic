@@ -53,3 +53,16 @@ output/
 In this case, we're trying to recover the function `y = f(x)`, where:
 - `x = [state, reward]`
 - `y = [rpe, value]`
+
+
+
+## Instrumental conditioning
+
+Directory structure: `data/instrumental/<env>/<agent and params/`
+
+To generate, edit the main in `experiments/gen_instrumental.py` (TODO make configurable). NOTE: will overwrite data for same settings.
+
+Run from root:
+```
+python -m experiments.gen_instrumental
+```
